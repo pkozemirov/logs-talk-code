@@ -1,0 +1,34 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  padding: 25px;
+}
+
+button {
+  padding: 5px;
+  margin-left: 10px;
+}
+
+input {
+  padding: 5px;
+}
+
+img {
+  margin-top: 25px;
+  display: block;
+  width: 200px;
+  border: 10px solid #ccc;
+}
+
+ul {
+  list-style: inside;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}

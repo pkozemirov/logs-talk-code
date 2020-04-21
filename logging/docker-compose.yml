@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  logstash:
+    image: logstash:7.6.2
+    ports:
+      - 8080:8080
+    volumes:
+      - ./logstash:/usr/share/logstash/pipeline:ro
+      - ./logs:/usr/share/logstash/output
+  elasticsearch:
+    image: elasticsearch:7.6.2
+    environment:
+      discovery.type: "single-node"
+  kibana:
+    image: kibana:7.6.2
+    ports:
+      - 5601:5601

@@ -1,0 +1,25 @@
+{
+  "name": "metrics",
+  "version": "1.0.0",
+  "description": "Metrics implementation",
+  "main": "index.js",
+  "author": "Pavel Kozemirov <pavel@kozemirov.ru>",
+  "license": "MIT",
+  "scripts": {
+    "client": "parcel build client/index.html --out-dir client/build",
+    "server": "nodemon server",
+    "start": "yarn client && yarn server"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3",
+    "parcel": "^1.12.4"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "name": "tracing",
+  "version": "1.0.0",
+  "description": "Tracing implementation",
+  "main": "index.js",
+  "author": "Pavel Kozemirov <pavel@kozemirov.ru>",
+  "license": "MIT",
+  "scripts": {
+    "client": "parcel build client/index.html --out-dir client/build",
+    "server": "nodemon server & nodemon worker",
+    "start": "yarn client && yarn server"
+  },
+  "devDependencies": {
+    "cssnano": "^4.1.10",
+    "nodemon": "^2.0.3"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "opentracing": "^0.14.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "browserslist": [
+    "last 1 Chrome versions"
+  ]
+}

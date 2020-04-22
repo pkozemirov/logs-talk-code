@@ -2,6 +2,7 @@ const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 const apiRoute = require('./api')
+global.logger = require('./logger')
 
 const { PORT = 3000 } = process.env
 
@@ -13,5 +14,5 @@ app
   .use(express.static(staticFilesDirectory))
   .use('/api', apiRoute)
   .listen(PORT, () => {
-    console.log(`Listening on port ${PORT}`)
+    logger.log(`Listening on port ${PORT}`)
   })

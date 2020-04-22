@@ -10,13 +10,13 @@ route
   })
   .post('/', (req, res) => {
     const newEntry = entries.add(req.body)
-    console.log(`Added new entry with id "${newEntry.id}"`)
+    logger.log(`Added new entry with id "${newEntry.id}"`)
     res.json(newEntry)
   })
   .delete('/:id', (req, res) => {
     const { id } = req.params
     entries.remove(id)
-    console.log(`Deleted entry with id "${id}"`)
+    logger.log(`Deleted entry with id "${id}"`)
     res.end()
   })
 

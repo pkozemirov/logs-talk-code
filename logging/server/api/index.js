@@ -5,7 +5,7 @@ const entriesApi = require('./entries')
 apiRoute
   .use('/entries', entriesApi)
   .get('*', (req, res) => {
-    console.error(`Unknown api request: ${req.path}`)
+    logger.error(`Unknown api request: ${req.path}`)
     res.status(404).end()
   })
 

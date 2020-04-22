@@ -2,6 +2,8 @@ const path = require('path')
 const express = require('express')
 const bodyParser = require('body-parser')
 const apiRoute = require('./api')
+const setupMetrics = require('./metrics')
+setupMetrics()
 
 const { PORT = 3000 } = process.env
 
